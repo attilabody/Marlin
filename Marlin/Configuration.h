@@ -609,14 +609,14 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 411.0 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 690 }
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 500, 400, 25, 50 }
+#define DEFAULT_MAX_FEEDRATE          { 500, 400, 25, 120 }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -624,7 +624,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 9000, 9000, 100, 10000 }
+#define DEFAULT_MAX_ACCELERATION      { 9000, 9000, 100, 800 }
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -649,7 +649,7 @@
 #define DEFAULT_XJERK                 10.0
 #define DEFAULT_YJERK                 10.0
 #define DEFAULT_ZJERK                  0.3
-#define DEFAULT_EJERK                  5.0
+#define DEFAULT_EJERK                  10.0
 
 /**
  * S-Curve Acceleration
@@ -777,8 +777,8 @@
  *      O-- FRONT --+
  *    (0,0)
  */
-#define X_PROBE_OFFSET_FROM_EXTRUDER -25 // X offset: -left  +right  [of the nozzle]
-#define Y_PROBE_OFFSET_FROM_EXTRUDER 0 // Y offset: -front +behind [the nozzle]
+#define X_PROBE_OFFSET_FROM_EXTRUDER 25 // X offset: -left  +right  [of the nozzle]
+#define Y_PROBE_OFFSET_FROM_EXTRUDER 10 // Y offset: -front +behind [the nozzle]
 #define Z_PROBE_OFFSET_FROM_EXTRUDER -1.3   // Z offset: -below +above  [the nozzle]
 
 // Certain types of probes need to stay away from edges
@@ -856,7 +856,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR true
+#define INVERT_E0_DIR false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
