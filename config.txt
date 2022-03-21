@@ -1,0 +1,39 @@
+; Linear Units:
+  G21 ; (mm)
+; Temperature Units:
+  M149 C ; Units in Celsius
+; Filament settings (Disabled):
+  M200 S0 D1.75
+; Steps per unit:
+  M92 X160.00 Y160.00 Z160.00 E552.00
+; Max feedrates (units/s):
+  M203 X500.00 Y500.00 Z500.00 E125.00
+; Max Acceleration (units/s2):
+  M201 X4000.00 Y4000.00 Z4000.00 E4000.00
+; Acceleration (units/s2) (P<print-accel> R<retract-accel> T<travel-accel>):
+  M204 P1500.00 R800.00 T1500.00
+; Advanced (B<min_segment_time_us> S<min_feedrate> T<min_travel_feedrate> X<max_x_jerk> Y<max_y_jerk> Z<max_z_jerk> E<max_e_jerk>):
+  M205 B20000.00 S0.00 T0.00 X10.00 Y10.00 Z5.00 E5.00
+; Auto Bed Leveling:
+  M420 S0 ; Leveling OFF
+; Delta (L<diagonal-rod> R<radius> H<height> S<seg-per-sec> XYZ<tower-angle-trim> ABC<rod-trim>):
+  M665 L280.00 R132.79 H269.76 S150.00 X0.11 Y-0.49 Z0.38 A0.00 B0.00 C0.00
+; Endstop adjustment:
+  M666 X-0.92 Y-0.70 Z0.00
+; Material heatup parameters:
+  M145 S0 H210.00 B65.00 F60
+  M145 S1 H240.00 B75.00 F60
+; Hotend PID:
+  M301 P13.76 I0.80 D59.40
+; Bed PID:
+  M304 P349.50 I67.73 D450.98
+; Z-Probe Offset:
+  M851 X0.00 Y0.00 Z-18.05 ; (mm)
+; Stepper driver current:
+  M906 X800 Y800 Z800
+; Driver stepping mode:
+  M569 S1 X Y Z
+; Linear Advance:
+  M900 K0.00
+; Filament load/unload:
+  M603 L650.00 U750.00 ; (mm)
