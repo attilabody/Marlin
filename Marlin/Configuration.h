@@ -69,7 +69,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(none, default config)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "abody" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -601,9 +601,9 @@
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
   	// BMO hotend
-    #define DEFAULT_Kp  13.65
-    #define DEFAULT_Ki   0.67
-    #define DEFAULT_Kd  69.06
+    #define DEFAULT_Kp  19.4
+    #define DEFAULT_Ki   1.27
+    #define DEFAULT_Kd  72.28
   #endif
 #endif // PIDTEMP
 
@@ -642,9 +642,9 @@
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 641.42
-  #define DEFAULT_bedKi 111.96
-  #define DEFAULT_bedKd 918.67
+  #define DEFAULT_bedKp 115.71
+  #define DEFAULT_bedKi  23.12
+  #define DEFAULT_bedKd 386.08
 
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
@@ -1181,7 +1181,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -27, -15, -1.25 }
+#define NOZZLE_TO_PROBE_OFFSET { -27, -15, -1.20 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1241,8 +1241,8 @@
  * A total of 2 does fast/slow probes with a weighted average.
  * A total of 3 or more adds more slow probes, taking the average.
  */
-#define MULTIPLE_PROBING 3
-#define EXTRA_PROBING    1
+//#define MULTIPLE_PROBING 3
+//#define EXTRA_PROBING    1
 
 /**
  * Z probes require clearance when deploying, stowing, and moving between
